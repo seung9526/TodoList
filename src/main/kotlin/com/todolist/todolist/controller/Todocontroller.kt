@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/todo")
 class Todocontroller(
         private val todoService: TodoService
-
 ) {
 
     @GetMapping
@@ -21,6 +20,5 @@ class Todocontroller(
 
     @DeleteMapping(path = ["/{todoId}"])
     fun deleteTodo(@PathVariable("todoId") todoId: Long) = todoService.deleteTodo(todoId)
-
 
 }
